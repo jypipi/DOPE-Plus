@@ -75,7 +75,7 @@ def append_dot(extensions):
     return res
 
 
-def loadimages(root, extensions=["png"]):
+def loadimages(root, extensions=[".png", ".jpg"]):
     imgs = []
     extensions = append_dot(extensions)
 
@@ -91,8 +91,13 @@ def loadimages(root, extensions=["png"]):
                     continue
                 #print("imgpath: ", imgpath)
 
-                base_name = file.replace("_rgb", "").split(".")[0] 
-                json_filename = base_name + ".json"
+                if ext == ".png":
+                    base_name = file.split(".")[0]
+                    json_filename = base_name + ".json"
+                elif ext == ".jpg":
+                    base_name = file.replace("_rgb", "").split(".")[0] 
+                    json_filename = base_name + "_convert.json"
+
                 json_path = os.path.join(root, json_filename) 
                 #print(base_name)
                 #print(json_path)
@@ -193,7 +198,7 @@ class CleanVisiiDopeLoader(data.Dataset):
         objects=None,
         sigma=1,
         output_size=400,
-        extensions=["jpg"],
+        extensions=["png", "jpg"], #extensions=["jpg"],
         debug=False,
         use_s3=False,
         buckets=[],
@@ -359,7 +364,8 @@ class CleanVisiiDopeLoader(data.Dataset):
         # data augmentation
         transform = A.Compose(
             [
-                A.RandomCrop(width=400, height=400),
+                A.RandomCrop(width=224, height=224),
+                A.HorizontalFlip(p=0.5),
                 A.Rotate(limit=180),
                 A.RandomBrightnessContrast(
                     brightness_limit=0.2, contrast_limit=0.15, p=1
