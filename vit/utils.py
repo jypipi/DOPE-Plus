@@ -495,6 +495,8 @@ class CleanVisiiDopeLoader(data.Dataset):
             "beliefs": torch.clamp(beliefs, 0, 1),
             "file_name": img_name,
             "img_original": img_original,
+            "json_path": path_json,
+            "img_path": path_img,
         }
 
 
