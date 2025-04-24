@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the two CSVs
 run1 = pd.read_csv('original_cookies.csv')
-run2 = pd.read_csv('vit_cookies.csv')
+run2 = pd.read_csv('vit_cookies_4.csv')
 run3 = pd.read_csv('original_block.csv')
 run4 = pd.read_csv('vit_block.csv')
 
@@ -26,7 +26,7 @@ for metric in metrics_to_plot:
     df1['_step'] = df1['_step'] * 0.5
     df2['_step'] = df2['_step'] * 0.5
 
-    plt.plot(df1['_step'], df1[metric], label=f'Cookies ({ORIGINAL})')
+    plt.plot(df1['_step'], df1[metric], label=f'Cookies ({ORIGINAL})', linewidth=2, marker='o', markevery=20)
     plt.plot(df2['_step'], df2[metric], label=f'Cookies ({VIT})')
 
     df3 = run3.dropna(subset=['_step', metric])
@@ -34,7 +34,7 @@ for metric in metrics_to_plot:
     df3['_step'] = df3['_step'] * 0.5
     df4['_step'] = df4['_step'] * 0.5
 
-    plt.plot(df3['_step'], df3[metric], label=f'Block ({ORIGINAL})')
+    plt.plot(df3['_step'], df3[metric], label=f'Block ({ORIGINAL})', linewidth=2, marker='o', markevery=20)
     plt.plot(df4['_step'], df4[metric], label=f'Block ({VIT})')
 
 plt.xlabel('Epoch')
@@ -43,7 +43,7 @@ title = f'Cosine Annealing Learning Rate'
 plt.title(title)
 plt.legend()
 plt.grid(True)
-save_path = f"Figures/Learning_rates.png"
+save_path = f"Figures/Learning_rates_2.png"
 # plt.savefig(save_path)
 
 plt.show()

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the two CSVs
 run1 = pd.read_csv('original_cookies.csv')
-run2 = pd.read_csv('vit_cookies.csv')
+run2 = pd.read_csv('vit_cookies_4.csv')
 run3 = pd.read_csv('original_block.csv')
 run4 = pd.read_csv('vit_block.csv')
 
@@ -76,7 +76,7 @@ elif plot_block:
 item = "Loss"
 if plot_cookies:
     OBJECT = 'Cookies'
-    save_path = f"Figures/{item}_cookies.png"
+    save_path = f"Figures/{item}_cookies_4.png"
 elif plot_block:
     OBJECT = 'Block'
     save_path = f"Figures/{item}_block.png"

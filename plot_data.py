@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Load the two CSVs
 run1 = pd.read_csv('original_cookies.csv')
-run2 = pd.read_csv('vit_cookies.csv')
+run2 = pd.read_csv('vit_cookies_4.csv')
 run3 = pd.read_csv('original_block.csv')
 run4 = pd.read_csv('vit_block.csv')
 
@@ -20,12 +20,13 @@ OBJECT = None
 #     'val_mAP', 'val_accuracy', 'val_ADD', 'val_loss'
 # ]
 
+ # TODO
 metrics_to_plot = [
-    'train_loss',
-    'val_loss',
+    'train_mAP',
+    'val_mAP',
 ]
-plot_cookies = 0
-plot_block = 1
+plot_cookies = 1 # TODO
+plot_block = 0 # TODO
 
 
 plt.figure()
@@ -38,7 +39,7 @@ for metric in metrics_to_plot:
                 print("Outlier found at index", i, "with value", run2[metric][i])
                 run2[metric][i] = run2[metric][i-1]
 
-    metric_label = metric.replace('_', ' ').title()
+    metric_label = metric.replace('_', ' ').title() # TODO
 
     if plot_cookies:
         df1 = run1.dropna(subset=['_step', metric])
@@ -59,10 +60,10 @@ for metric in metrics_to_plot:
         plt.plot(df4['_step'], df4[metric], label=metric_label + f' ({VIT})')
 
 
-item = "Loss"
+item = "mAP" # TODO
 if plot_cookies:
     OBJECT = 'Cookies'
-    save_path = f"Figures/{item}_cookies.png"
+    save_path = f"Figures/{item}_cookies_2.png"
 elif plot_block:
     OBJECT = 'Block'
     save_path = f"Figures/{item}_block.png"
@@ -75,6 +76,6 @@ plt.title(title)
 plt.legend()
 plt.grid(True)
 
-# plt.savefig(save_path)
+plt.savefig(save_path) # TODO
 
 plt.show()
