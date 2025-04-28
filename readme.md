@@ -7,7 +7,7 @@ This is the public repository for our DOPE-Plus project
 
 
 ## Contents
-This repository contains our source code for [training](train), [inference](inference), and synthetic [data generation](data_generation) using [Blenderproc](https://github.com/DLR-RM/BlenderProc), which were built upon the original DOPE codebase.
+This repository contains our source code for [training](train), [inference](inference), and [synthetic data generation](data_generation) using [Blenderproc](https://github.com/DLR-RM/BlenderProc), which were built upon the original DOPE codebase.
 
 
 ## Tested Configurations
@@ -36,7 +36,7 @@ In addition, we included our [3D texured model of the Block](data_generation/ble
 If you found our work helpful, consider citing us with the following BibTeX reference:
 
 ```
-@article{jeffery2025deeprob,
+@article{jeffrey2025deeprob,
   title = {DOPE-Plus: Enhancements in Feature Extraction and Data Generation for 6D Pose Estimation},
   author = {Chen, Jeffrey and Luo, Yuqiao and Yuan, Longzhen},
   year = {2025}
