@@ -1,12 +1,7 @@
 # Synthetic Data Generation
 
 This directory contains code for data generation (both
-images and associated JSON files) for training DOPE.  We provide
-two variations of this code, one that uses [NVISII](https://github.com/owl-project/NVISII) for rendering, and another that
-uses [Blenderproc](https://github.com/DLR-RM/BlenderProc).
-The data produced by these pipelines are compatible with each
-other, and can be combined into a single dataset without
-issues.
+images and associated JSON files) built upon [DOPE](https://github.com/NVlabs/Deep_Object_Pose/tree/master) and [Blenderproc](https://github.com/DLR-RM/BlenderProc).
 
 We highly recommend a GPU with 
 [RTX capabilities](https://www.nvidia.com/en-us/geforce/news/geforce-gtx-dxr-ray-tracing-available-now/), as ray tracing can be costly on a non-RTX GPU. 

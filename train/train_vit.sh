@@ -25,7 +25,7 @@
 # done
 
 ############### Cookies
-TRAINING_SYNC_DIR=/home/jeff/Deep_Object_Pose/train/training_data/cookies_imgs
+TRAINING_SYNC_DIR=~/Deep_Object_Pose/train/training_data/cookies_imgs
 TRAINING_REAL_DIR=~/Deep_Object_Pose/train/training_data/hope-dataset/hope_video
 
 DATA_ARGS=""
@@ -63,7 +63,7 @@ CMD="python -m torch.distributed.launch --nproc_per_node=1 train_vit.py --data $
 #  --batchsize 64 \
 #  --lr 0.00005 \
 #  --outf "output_block_vit/vit_block_2" \
-#  --obj_model_path "/home/jeff/Deep_Object_Pose/data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/model_obj.obj" \
+#  --obj_model_path "~/Deep_Object_Pose/data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/model_obj.obj" \
 #  --loginterval 10"
  
 # # loginterval: print log every XX batches
@@ -75,7 +75,7 @@ ARGS="--object Cookies \
  --batchsize 64 \
  --lr 0.00005 \
  --outf "output_cookies_vit/vit_cookies_4" \
- --obj_model_path "/home/jeff/Deep_Object_Pose/data_generation/models/Cookies/textured.obj" \
+ --obj_model_path "~/Deep_Object_Pose/data_generation/models/Cookies/textured.obj" \
  --loginterval 10"
 
 CMD+=" $ARGS"

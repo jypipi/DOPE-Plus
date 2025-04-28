@@ -1,10 +1,6 @@
 # Deep Object Pose Estimation (DOPE) - Training 
 
-This repo contains a simplified version of the training pipeline for DOPE.
-Scripts for inference, evaluation, and data visualization can be found in this repo's top-level directories `inference` and `evaluate`.
-
-A user report of training DOPE on a single GPU using NVISII-created synthetic data can [be found here](https://github.com/NVlabs/Deep_Object_Pose/issues/155#issuecomment-791148200).
-
+This repo contains the training pipelines for the original DOPE and ViT-DOPE.
 
 
 ## Installing Dependencies
@@ -22,6 +18,14 @@ pip install -r ../requirements.txt
 ```
 
 ## Training
+
+### Usage example:
+
+Sampled command to run the training script:
+```
+./train_vit.sh
+```
+
 To run the training script, at minimum the ``--data`` and ``--object`` flags must be specified if training with data that is stored locally:
 ```
 python -m torch.distributed.launch --nproc_per_node=1 train.py --data PATH_TO_DATA --object CLASS_OF_OBJECT

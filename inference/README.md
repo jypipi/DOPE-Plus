@@ -12,6 +12,13 @@ in the root of the repo:
 pip install -r ../requirements.txt
 ```
 
+### Usage example:
+
+Sampled command to run the inference script for models trained with the original DOPE framework:
+```
+python inference_original.py --weights ../weights/Cookies.pth --data ../data_generation/blenderproc_data_gen/cookies_data/1 --object Cookies --outf cookies_output --camera ../config/synthetic_camera_info.yaml --config ../config/config_pose.yaml --debug
+```
+
 ## Running Inference
 
 The `inference.py` script will take a trained model to run inference. In order to run, the following 3 arguments are needed: 

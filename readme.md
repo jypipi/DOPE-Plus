@@ -1,60 +1,49 @@
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 ![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
+
 # Deep Object Pose Estimation
 
-This is the official repository for NVIDIA's Deep Object Pose Estimation, which performs detection and 6-DoF pose estimation of **known objects** from an RGB camera.  For full details, see our [CoRL 2018 paper](https://arxiv.org/abs/1809.10790) and [video](https://youtu.be/yVGViBqWtBI).
-
-
-![DOPE Objects](dope_objects.png)
+This is the public repository for our DOPE-Plus project
 
 
 ## Contents
-This repository contains complete code for [training](train), [inference](inference), numerical [evaluation](evaluate) of results, and synthetic [data generation](data_generation) using either  [NVISII](https://github.com/owl-project/NVISII) or [Blenderproc](https://github.com/DLR-RM/BlenderProc).  We also provide a [ROS1 Noetic package](ros1) that performs inference on images from a USB camera.
-
-Hardware-accelerated ROS2 inference can be done with the
-[Isaac ROS DOPE](https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_pose_estimation/tree/main/isaac_ros_dope) project.
-
-
-### A Note On Repo Organization
-* `train2` contains the original training code, used to generate the results in the CORL paper. There have been some minor bug fixes, but this code will remain largely untouched in the future.
-* Similarly, the synthetic data generation code in `data_generation/nvisii_data_gen/` was used for the paper, but depends on a rendering library that is no longer maintained.
-* `train` contains new training code that is intended to be simpler and easier for users to understand and modify. This code will be maintained, and any new features will be added here.
-* The synthetic data generation code in `data_generation/blenderproc` is a replacement for the nvisii code, using a different rendering engine that is still actively maintained.
-
+This repository contains our source code for [training](train), [inference](inference), and synthetic [data generation](data_generation) using [Blenderproc](https://github.com/DLR-RM/BlenderProc), which were built upon the original DOPE codebase.
 
 
 ## Tested Configurations
 
-We have tested our standalone training, inference and evaluation scripts on Ubuntu 20.04 and 22.04 with Python 3.8+, using an NVIDIA Titan X, 2080Ti, and Titan RTX. 
-
-The ROS1 node has been tested with ROS Noetic using Python 3.10. The Isaac ROS2 DOPE node has been tested with ROS2 Foxy on Jetson AGX Xavier with JetPack 4.6; and on x86/Ubuntu 20.04 with a NVIDIA Titan X, 2080Ti, and Titan RTX.  
+We have tested our standalone training and inference scripts on Ubuntu 20.04 with Python 3.8.10, using NVIDIA RTX 4090 and A2000 GPUs. 
 
 
 ## Datasets
 
-We have trained and tested DOPE with two publicaly available datasets: YCB, and HOPE. The trained weights can be [downloaded from Google Drive](https://drive.google.com/drive/folders/1DfoA3m_Bm0fW8tOWXGVxi4ETlLEAgmcg).
+We have trained and tested DOPE with two publicaly available datasets: YCB, and HOPE.
+We trained and tested DOPE-Plus with our HOPE-Syn&Real Dataset and the Synthetic Block Dataset. All synthetic images were generated with our enhanced data generation pipeline. The HOPE-Syn&Real Dataset also contains real images from the publicaly available dataset HOPE.
 
 
-
-### YCB 3D Models
-YCB models can be downloaded from the [YCB website](http://www.ycbbenchmarks.com/), or by  using [NVDU](https://github.com/NVIDIA/Dataset_Utilities) (see the `nvdu_ycb` command).  
-
-
-### HOPE 3D Models
+### 3D Textured Models
 The [HOPE dataset](https://github.com/swtyree/hope-dataset/) is a collection of RGBD images and video sequences with labeled 6-DoF poses for 28 toy grocery objects.  The 3D models [can be  downloaded here](https://drive.google.com/drive/folders/1jiJS9KgcYAkfb8KJPp5MRlB0P11BStft). 
-The folders are organized in the style of the YCB 3d models. 
 
-The physical objects can be purchased online (details and links to Amazon can be found in the [HOPE repository README](https://github.com/swtyree/hope-dataset/).
+In addition, we included our [3D texured model of the Block](data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/).
 
 <br><br>
 
 ---
 
 
+## How to cite DOPE
 
-## How to cite DOPE 
+If you found our work helpful, consider citing us with the following BibTeX reference:
 
-If you use this tool in a research project, please cite as follows:
+```
+@article{jeffery2025deeprob,
+  title = {DOPE-Plus: Enhancements in Feature Extraction and Data Generation for 6D Pose Estimation},
+  author = {Chen, Jeffrey and Luo, Yuqiao and Yuan, Longzhen},
+  year = {2025}
+}
+```
+
+Please cite the original DOPE as well:
 ```
 @inproceedings{tremblay2018corl:dope,
  author = {Jonathan Tremblay and Thang To and Balakumar Sundaralingam and Yu Xiang and Dieter Fox and Stan Birchfield},
@@ -65,16 +54,6 @@ If you use this tool in a research project, please cite as follows:
 }
 ```
 
-## License
+## Contacts
 
-Copyright (C) 2018-2024 NVIDIA Corporation. All rights reserved. This code is licensed under the [NVIDIA Source Code License](https://github.com/NVlabs/HANDAL/blob/main/LICENSE.txt).
-
-
-## Acknowledgment
-
-Thanks to Jeff Smith (jeffreys@nvidia.com) for help maintaining the repo and software.  Thanks also to [Martin Günther](https://github.com/mintar) for his code contributions and fixes.  
-
-
-## Contact
-
-Jonathan Tremblay (jtremblay@nvidia.com), Stan Birchfield (sbirchfield@nvidia.com)
+Jeffrey Chen (jeffzc@umich.edu), Yuqiao Luo (joeluo@umich.edu), and Longzhen Yuan (longzhen@umich.edu)

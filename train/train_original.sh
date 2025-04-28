@@ -25,7 +25,7 @@ for i in {49..50}; do
 done
 
 # ############### Cookies
-# TRAINING_SYNC_DIR=/home/jeff/Deep_Object_Pose/train/training_data/cookies_imgs
+# TRAINING_SYNC_DIR=~/Deep_Object_Pose/train/training_data/cookies_imgs
 # TRAINING_REAL_DIR=~/Deep_Object_Pose/train/training_data/hope-dataset/hope_video
 
 # DATA_ARGS=""
@@ -64,7 +64,7 @@ ARGS="--object Block_w_sandpaper \
  --batchsize 64 \
  --lr 0.00005 \
  --outf "output_block_original/original_block_1"
- --obj_model_path "/home/jeff/Deep_Object_Pose/data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/model_obj.obj" \
+ --obj_model_path "~/Deep_Object_Pose/data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/model_obj.obj" \
  --loginterval 10"
  
 # # loginterval: print log every XX batches
@@ -76,7 +76,7 @@ ARGS="--object Block_w_sandpaper \
 #  --batchsize 64 \
 #  --lr 0.00005 \
 #  --outf "output_cookies_vit/original_cookies_1" \
-#  --obj_model_path "/home/jeff/Deep_Object_Pose/data_generation/models/Cookies/textured.obj" \
+#  --obj_model_path "~/Deep_Object_Pose/data_generation/models/Cookies/textured.obj" \
 #  --loginterval 10"
 
 
