@@ -3,6 +3,8 @@
 This directory contains code for data generation (both
 images and associated JSON files) built upon [DOPE](https://github.com/NVlabs/Deep_Object_Pose/tree/master) and [Blenderproc](https://github.com/DLR-RM/BlenderProc).
 
+Proceed to [this folder](blenderproc_data_gen/) to run the data synthesis pipeline.
+
 We highly recommend a GPU with 
 [RTX capabilities](https://www.nvidia.com/en-us/geforce/news/geforce-gtx-dxr-ray-tracing-available-now/), as ray tracing can be costly on a non-RTX GPU. 
 
