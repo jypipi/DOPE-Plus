@@ -17,8 +17,7 @@ We have tested our standalone training and inference scripts on Ubuntu 20.04 wit
 
 ## Datasets
 
-We have trained and tested DOPE with two publicaly available datasets: YCB, and HOPE.
-We trained and tested DOPE-Plus with our HOPE-Syn&Real Dataset and the Synthetic Block Dataset. All synthetic images were generated with our enhanced data generation pipeline. The HOPE-Syn&Real Dataset also contains real images from the publicaly available dataset HOPE.
+We trained and tested DOPE-Plus with our HOPE-Syn&Real Dataset and the Synthetic Block Dataset. All synthetic images were generated with our enhanced data generation pipeline. The HOPE-Syn&Real Dataset also contains real images from the publicaly available [HOPE dataset](https://github.com/swtyree/hope-dataset/).
 
 
 ### 3D Textured Models

@@ -20,8 +20,8 @@ authors:
 
 
 <div class="project-links" markdown="1">
-[![]({{ site.baseurl }}/assets/logos/acrobat.svg){: .text-logo } Report]({{ site.baseurl }}Project_Report.pdf){: .btn .btn-grey .mr-6 }
-[![]({{ site.baseurl }}/assets/logos/github-mark.svg){: .text-logo } Code](https://github.com/jypipi/DOPE-Plus){: .btn .btn-grey target="_blank" rel="noopener noreferrer" }
+[![]({{ site.baseurl }}/assets/logos/acrobat.svg){: .text-logo }Report](https://github.com/jypipi/DOPE-Plus/blob/master/Project_Report.pdf){: .btn .btn-grey .mr-6 }
+[![]({{ site.baseurl }}/assets/logos/github-mark.svg){: .text-logo }Code](https://github.com/jypipi/DOPE-Plus){: .btn .btn-grey target="_blank" rel="noopener noreferrer" }
 </div>
 
 
@@ -33,7 +33,7 @@ This study explored enhancements to the DOPE framework by improving both its net
 
 As robotics continues to advance, researchers are increasingly exploring ways to equip robots with the capabilities needed to perform everyday tasks. Many of these tasks require fundamental operations such as object fetching, which depend on accurate pose estimation of target objects. This study investigated the DOPE (Deep Object Pose Estimation) proposed by J. Tremblay et al. in 2018, and further extended the feature extraction and data generation pipelines. The original DOPE framework employed VGG-19 as the feature extractor. In our work, we replaced it with a Vision Transformer (ViT), motivated by its superior feature extraction capabilities, particularly in capturing relationships between multiple objects. Meanwhile, we enhanced the original DOPE data synthesis pipeline to augment and generate two new datasets for network training. Our goal is to improve the accuracy of 6D object pose estimation and to validate the effectiveness of our enhancements for object perception in real-world scenarios.
 
-### DOPE  
+### DOPE
 
 DOPE (Deep Object Pose Estimation) is a one-shot, instance-based, deep neural network-based system designed to estimate the 3D poses of known objects in cluttered scenes from a single RGB image, in near real time and without the need for post-alignment.The DOPE network is a convolutional deep neural network that detects objects' 3D keypoints using multistage architechture. 
 
