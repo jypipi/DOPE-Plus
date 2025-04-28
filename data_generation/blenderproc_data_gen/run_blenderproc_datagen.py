@@ -43,7 +43,8 @@ amount_of_runs = opt.nb_runs
 # set the folder in which the generation script is located
 rerun_folder = os.path.abspath(os.path.dirname(__file__))
 
-total = 19300
+total_block = 19300
+total_cookies = 12040
 
 Q = Queue(maxsize = num_workers)
 for run_id in range(opt.start_folder, opt.start_folder + amount_of_runs):

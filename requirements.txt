@@ -35,6 +35,9 @@ threadpoolctl
 tifffile
 typing_extensions
 urllib3
+wandb
+timm
+open3d
 
 
 ## If running into dependency issues, install the version-specific requirements below in a virtual environment
