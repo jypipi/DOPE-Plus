@@ -1,9 +1,9 @@
 [![License CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode)
 ![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)
 
-# Deep Object Pose Estimation
+# DOPE-Plus: Enhancements in Feature Extraction and Data Generation for 6D Pose Estimation
 
-This is the public repository for our DOPE-Plus project
+This is the public repository for our DOPE-Plus project. It is developed upon NVIDIA's [Deep Object Pose Estimation](https://github.com/NVlabs/Deep_Object_Pose).
 
 
 ## Contents
@@ -31,7 +31,7 @@ In addition, we included our [3D texured model of the Block](data_generation/ble
 ---
 
 
-## How to cite DOPE
+## Citation
 
 If you found our work helpful, consider citing us with the following BibTeX reference:
 
