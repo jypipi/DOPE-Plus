@@ -23,7 +23,7 @@ We trained and tested DOPE-Plus with our HOPE-Syn&Real Dataset and the Synthetic
 ### 3D Textured Models
 The [HOPE dataset](https://github.com/swtyree/hope-dataset/) is a collection of RGBD images and video sequences with labeled 6-DoF poses for 28 toy grocery objects.  The 3D models [can be  downloaded here](https://drive.google.com/drive/folders/1jiJS9KgcYAkfb8KJPp5MRlB0P11BStft). 
 
-In addition, we included our [3D texured model of the Block](data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/).
+In addition, we included our [3D texured model of the Block object](data_generation/blenderproc_data_gen/models/Block_w_sandpaper_obj/).
 
 <br><br>
 
@@ -38,6 +38,7 @@ If you found our work helpful, consider citing us with the following BibTeX refe
 @article{jeffrey2025deeprob,
   title = {DOPE-Plus: Enhancements in Feature Extraction and Data Generation for 6D Pose Estimation},
   author = {Chen, Jeffrey and Luo, Yuqiao and Yuan, Longzhen},
+  url = "https://github.com/jypipi/DOPE-Plus",
   year = {2025}
 }
 ```
